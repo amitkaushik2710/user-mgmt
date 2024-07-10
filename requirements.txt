@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+firebase-admin
+jinja2
+bcrypt
+structlog
+python-dotenv
+starlette

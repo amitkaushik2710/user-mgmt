@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  user-mgmt:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+
+  smtp:
+    image: namshi/smtp
+    environment:
+      - MAILNAME=smtp
+      - RELAYHOST=:25
+    ports:
+      - "2525:25"
